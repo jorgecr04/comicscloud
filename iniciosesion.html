@@ -1,0 +1,125 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,700&display=swap" rel="stylesheet">
+    <link href="https://unpkg.com/ionicons@4.5.10-0/dist/css/ionicons.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.6.0/css/bootstrap.min.css">
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link href="estiloregistro.css" rel="stylesheet">
+
+    <title>Iniciar sesión</title>
+  </head>
+  <body>
+   <header>
+       
+   </header>
+   <section class="contact-box">
+       <div class="row no-gutters bg-dark">
+           <div class="col-xl-5 col-lg-12 register-bg">
+            <div class="position-absolute testiomonial p-4">
+                
+            </div>
+           </div>
+           <div class="col-xl-7 col-lg-12 d-flex">
+                <div class="container align-self-center p-6">
+                    <h1 class="font-weight-bold mb-3">Inicia sesión</h1>
+                    <div class="form-group">
+                        <button class="btn btn-outline-dark d-inline-block text-light mr-2 mb-3 width-100"><i class="icon ion-logo-google lead align-middle mr-2"></i> Google </button>
+                        <button class="btn btn-outline-dark d-inline-block text-light mb-3 width-100"><i class="icon ion-logo-facebook lead align-middle mr-2"></i> Facebook</button>
+                    </div>
+                    <p class="text-muted mb-5">Ingresa la siguiente información para iniciar sesión</p>
+
+                    <form>
+                        <div class="container">
+                            <div class="row mb-5">
+                                <form>
+                                    <div class="form-group">
+                                        <label for=""">Usuario</label>
+                                        <input type=" text" class="form-control" id="usuario">
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="">Password</label>
+                                        <input type="password" class="form-control" id="clave">
+                                    </div>
+                    
+                                    <p class="error" id="error"></p>
+                                    <input type="button" onclick="Validar()" value="Enviar" class="btn btn-primary">
+                    
+                    
+                                </form>
+                                <div class="form-group mb-5">
+                                    <div class="form-check">
+                                        <input class="form-check-input" type="checkbox">
+                                        <label class="form-check-label text-muted">Recordar datos para el proximo inicio</label>
+                                    </div>
+                                </div>
+                                
+                            </div>
+                            <div class="form-group mb-5">
+                                <div>
+                                    <p>¿Aún no estas registrado?<a href="registrarse.html"> Registrarse</a></p>
+                                </div>
+                            </div>
+                        </div>
+                    </form>
+                    <small class="d-inline-block text-muted mt-5">Todos los derechos reservados | © 2022 Comics Cloud</small>
+                </div>
+           </div>
+       </div>
+   </section>
+
+   <script>
+
+    function Validar() {
+
+        //Coger los datos del formulario 
+        var usuario = document.getElementById("usuario").value;
+        var clave = document.getElementById("clave").value;
+
+        if (usuario == "admin" && clave == "1234") {
+
+            //Si somos administrador nos vamos a una web administrador
+            window.location.pathname = '/administrador.html';
+
+
+
+        } else {
+            //Si algun dato está erroneo mostramos un mensaje
+            document.getElementById("error").innerHTML="Datos del usuario erroneo";
+        }
+
+        if (usuario == "pepe" && clave == "1234") {
+
+            //Si somos usuario nos vamos a una web administrador
+            window.location.pathname = '/index.html';
+
+        } else {
+            //Si algun dato está erroneo mostramos un mensaje
+            document.getElementById("error").innerHTML="Datos del usuario erroneo";
+    
+        }
+
+
+
+    }
+
+</script>
+
+  
+
+  
+   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.slim.min.js"></script>
+   <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.1/umd/popper.min.js"></script>
+   <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.6.0/js/bootstrap.min.js"></script>
+
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+  </body>
+</html>
